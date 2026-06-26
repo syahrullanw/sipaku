@@ -17,6 +17,10 @@ public/error_log
 # Update packages (uploaded via admin panel)
 update/
 
+# Local config (credentials) — gunakan file .example.php sebagai template
+/app/Config/database.php
+/app/Config/app.php
+
 # Generated/compiled assets
 scss.css
 js.js
