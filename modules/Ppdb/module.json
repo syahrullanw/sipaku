@@ -1,0 +1,7 @@
+{
+  "name": "ppdb",
+  "version": "0.1.0",
+  "routes": {
+    "web": "routes/web.php"
+  }
+}

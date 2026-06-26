@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #eef2ff, #f8fafc);
+    min-height: 100vh;
+}
+
+main {
+    padding: 24px;
+}
+
+.login-card {
+    backdrop-filter: blur(8px);
+}
+
+.table-scroll::-webkit-scrollbar {
+    height: 6px;
+}
+
+.table-scroll::-webkit-scrollbar-thumb {
+    background-color: rgba(148, 163, 184, 0.6);
+    border-radius: 9999px;
+}
+
+.table-scroll::-webkit-scrollbar-track {
+    background-color: rgba(226, 232, 240, 0.6);
+}

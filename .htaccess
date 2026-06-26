@@ -1,0 +1,19 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Send direct hits on the root to the public front controller
+    RewriteRule ^$ public/index.php [L]
+
+    # Redirect direct requests for /public back to the project root
+    RewriteCond %{THE_REQUEST} \s/+public/
+    RewriteRule ^public/(.*)$ $1 [L,R=301]
+
+    # Serve existing files or directories as-is
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # Send the rest to the public front controller
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>

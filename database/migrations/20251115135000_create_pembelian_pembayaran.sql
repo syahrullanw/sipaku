@@ -1,0 +1,21 @@
+CREATE TABLE IF NOT EXISTS pembelian_pembayaran (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    pembelian_id INT UNSIGNED NOT NULL,
+    kode_transaksi VARCHAR(80) NOT NULL,
+    tanggal_bayar DATETIME NOT NULL,
+    metode ENUM('cash','tabungan','sekolah') NOT NULL,
+    nominal DECIMAL(15,2) NOT NULL DEFAULT 0.00,
+    sisa_setelah DECIMAL(15,2) NOT NULL DEFAULT 0.00,
+    catatan TEXT NULL,
+    tabungan_transaksi_id INT UNSIGNED NULL,
+    created_at TIMESTAMP NULL DEFAULT NULL,
+    updated_at TIMESTAMP NULL DEFAULT NULL,
+    created_by INT UNSIGNED NULL,
+    updated_by INT UNSIGNED NULL,
+    UNIQUE KEY unique_pembelian_payment_kode (kode_transaksi),
+    KEY idx_pembelian_payment_purchase (pembelian_id),
+    CONSTRAINT fk_pembelian_payment_purchase FOREIGN KEY (pembelian_id) REFERENCES pembelian_perlengkapan(id) ON DELETE CASCADE,
+    CONSTRAINT fk_pembelian_payment_savings FOREIGN KEY (tabungan_transaksi_id) REFERENCES tabungan_transaksi(id) ON DELETE SET NULL,
+    CONSTRAINT fk_pembelian_payment_created_by FOREIGN KEY (created_by) REFERENCES users(id) ON DELETE SET NULL,
+    CONSTRAINT fk_pembelian_payment_updated_by FOREIGN KEY (updated_by) REFERENCES users(id) ON DELETE SET NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

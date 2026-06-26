@@ -1,0 +1,5 @@
+{
+    "registration_template": "*Pesan Otomatis*\r\n\r\nYth. {{nama}},\r\nPendaftaran Siswa Baru {{sekolah}} untuk {{periode}} sudah kami terima dan tersimpan di database sekolah.\r\n\r\nKamu Urutan Pendaftar ke : {{urutan_pendaftar}}\r\nDengan Kode pendaftaran  : {{kode_pendaftaran}}.\r\n\r\nJika kamu masuk dalam pendaftar urutan 1-25 maka kamu berhak mendapatkan *Kaos Olahraga dan Seragam PDH GRATIS*. Silahkan datang ke sekolah dan tunjukkan pesan ini kepada panitia SPMB.\r\n\r\nJika ada pertanyaan lebih lanjut, silahkan jawab pesan ini, admin akan segera membalasnya !\r\n\r\nDitunggu di sekolah ya \ud83e\udef6\ud83c\udffb",
+    "broadcast_template": "Yth. {{nama}},\r\nInformasi PPDB {{sekolah}} ({{periode}}):\r\n{{pesan}}\r\n\r\nKode pendaftaran Anda: {{kode_pendaftaran}}.",
+    "updated_at": "2026-04-29T17:23:31+07:00"
+}

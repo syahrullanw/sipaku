@@ -1,0 +1,28 @@
+node_modules
+/build
+*.log
+.DS_Store
+
+# Application runtime data
+public/uploads/*
+!public/uploads/.gitkeep
+storage/cache/*
+!storage/cache/.gitkeep
+storage/backups/*
+!storage/backups/.gitkeep
+storage/keuangan/*
+!storage/keuangan/.gitkeep
+public/error_log
+
+# Update packages (uploaded via admin panel)
+update/
+
+# Generated/compiled assets
+scss.css
+js.js
+app/Config/app.php.zip
+Archive.zip
+
+# OS files
+Thumbs.db
+Desktop.ini
